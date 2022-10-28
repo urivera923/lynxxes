@@ -31,16 +31,33 @@
 
             $sql = "SELECT * FROM usuarios WHERE nombre = '$usuario' AND password = '$password'";
             print_r($sql);
-            // $respuesta = mysqli_query($conexion, $sql);
-            // $filas = mysqli_fetch_array($respuesta);
-            // print_r($filas);
-            // if ($filas['rol_id'] == 1) {
-            //     header('location:../../Crud/indexAdmin.php');
-            // } else if ($filas['rol_id'] == 2) {
-            //     header('location:../../Crud/index.php');
-            // } else {
-            //     header('location:../../Login/error.php');
-            // }
+            $respuesta = mysqli_query($conexion, $sql);
+            $filas = mysqli_fetch_array($respuesta);
+            print_r($filas);
+            if ($filas['rol_id'] == 1) {
+                header('location:../../Crud/indexAdmin.php');
+            } else if ($filas['rol_id'] == 2) {
+                header('location:../../Crud/index.php');
+            } else {
+                header('location:../../Login/error.php');
+            }
         }
+
+        public function idUsuario($sql)
+        {
+            $c = new conectar();
+            $conexion=$c->conexion();
+            $respuesta = mysqli_query($conexion, $sql);
+            return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
+        }
+        
+        public function monstarDatos($sql)
+        {
+            $c=new conectar();
+            $conexion=$c->conexion();
+            $result = mysqli_query($conexion, $sql);
+            return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
+
     }
 ?>

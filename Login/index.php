@@ -69,10 +69,10 @@
                     </div>
                    
                     <div class="mb-4">
-                      <button class="btn btn-info">Iniciar</button>
-                      <!-- <div class="d-grid gap-2">
-                        <button class="btn btn_register btn-primary btn-block fa-lg p-3" type="button">Iniciar Sesión</button>
-                      </div> -->
+                      <div class="d-grid gap-2">
+                        <!-- <button class="btn btn-info">Iniciar</button> -->
+                        <button class="btn btn_register btn-primary btn-block fa-lg p-3">Iniciar Sesión</button>
+                      </div>
                     </div>
                   </form>
 

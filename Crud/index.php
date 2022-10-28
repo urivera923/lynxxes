@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Inicio</title>
 </head>
 
@@ -27,11 +28,11 @@
                         <p class="text-muted">LynXXXes una página web de alojamiento de fotos pornográficas. LynXXXes fue fundada en CDMX en 2022 por los propietarios Mexicanos La cosita fea y La cosita más fea. El sitio web mexicano ahora está registrado a nombre de la empresa checa XZUNUN.</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
+                        <h4 class="text-white">Contactanos</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email me</a></li>
+                            <li><a href="#" class="text-white"><i class="fa-brands fa-twitter me-2"></i> Follow on Twitter </a></li>
+                            <li><a href="#" class="text-white"><i class="fa-brands fa-facebook-f me-2"></i>Fallow on Facebook</a></li>
+                            <li><a href="#" class="text-white"><i class="fa-solid fa-paper-plane me-2"></i>Email me</a></li>
                         </ul>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
     $pass = $_POST['txtPassword'];
     $rol = $_POST['txtRol'];
 
-    $pass = sha1($pass);
+    // $pass = sha1($pass);
 
     $datos = array(
         $user,

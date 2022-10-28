@@ -6,7 +6,7 @@
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
     $_SESSION['usuario'] = $usuario;
-    $password = sha1($password);
+    // $password = sha1($password);
 
 
     $obj = new metodosPadre();

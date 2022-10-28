@@ -32,14 +32,14 @@
                             Bootstrap
                         </a>
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="text-white ms-4 mt-3"> Bienvienido <span class="fw-bolder"><?php echo $_SESSION['usuario']; ?></span></p>
+                            <p class="text-white ms-4 mt-3"> Bienvienido, administrador: <span class="fw-bolder"><?php echo $_SESSION['usuario']; ?></span></p>
                             <button class="btn btn-outline-danger ms-4"><a href="../Login/procesos/salirUsuario.php" class="text-decoration-none text-light">Cerrar Sesión</a></button>
                         </div>
 
                     </div>
                 </nav>
 
-                 <div class="card my-5 mx-5 shadow border">
+                 <!-- <div class="card my-5 mx-5 shadow border">
                     <div class="card-header text-white bg-dark">
                         <div class="text-center fw-bold">Formulario</div>
                     </div>
@@ -56,10 +56,10 @@
                             <button type="submit" class="btn btn-primary">Agregar</button>
                         </form>
                     </div>
-                </div> 
+                </div>  -->
 
 
-                <div class="card border shadow mb-5 mx-5">
+                <div class="card my-5 border shadow mt-5 mx-5">
                     <div class="card-header text-white bg-dark text-center">
                         <div class=" fw-bold">Información</div>
                     </div>
@@ -70,28 +70,45 @@
                                 <thead>
                                     <tr class="text-center">
                                         <th scope="col">ID</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Concepto o Categoria</th>
-                                        <th scope="col">Fecha</th>
-                                        <th scope="col">Actualizar</th>
-                                        <th scope="col">Eliminar</th>
+                                        <th scope="col">nombre</th>
+                                        <th scope="col">editar</th>
+                                        <th scope="col">eliminar</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
 
+                                    <?php
+
+                                        $obj = new metodosPadre();
+                                        $sql_consulta = "SELECT * FROM usuarios WHERE nombre = '$nombre_usuario'";
+                                        $id = $obj->idUsuario($sql_consulta);
+                                        $id_usuario = $id[0]['id_usuario'];
+                                        // print_r($id_usuario);
+                                        $sql = "SELECT id_usuario, nombre FROM usuarios WHERE id_usuario = '$id_usuario'";
+                                        // print_r($sql);
+                                        $datos = $obj->monstarDatos($sql);
+
+                                        foreach ($datos as $key) {
+                                            # code...
+                                        
+                                    
+                                    ?>
+
                                     <tr class="text-center">
 
-                                        <td>s</td>
-                                        <td>s</td>
-                                        <td>s</td>
-                                        <td>s</td>
+                                        <td><?php echo $key['id_usuario']?></td>
+                                        <td><?php echo $key['nombre']?></td>
 
-                                        <td><span class="btn btn-warning text-white"><a class="text-white text-decoration-none" href="editar.php?id=<?php echo $key['id_gasto']; ?>"><i class="fa-solid fa-pen-to-square mx-2"></i>Editar</a></span></td>
-                                        <td><span class="btn btn-danger text-white"><a class="text-white text-decoration-none" href="./procesos/eliminarCrud.php?id=<?php echo $key['id_gasto']; ?>"><i class="fa-solid fa-trash-can mx-2"></i>Eliminar</a></span></td>
-
+                                        <!-- <td><span class="btn btn-warning text-white"><a class="text-white text-decoration-none" href="editar.php?id=<?php echo $key['id_gasto']; ?>"><i class="fa-solid fa-pen-to-square mx-2"></i>Editar</a></span></td>
+                                        <td><span class="btn btn-danger text-white"><a class="text-white text-decoration-none" href="./procesos/eliminarCrud.php?id=<?php echo $key['id_gasto']; ?>"><i class="fa-solid fa-trash-can mx-2"></i>Eliminar</a></span></td> -->
+                                        <td><span class="btn btn-warning text-white"><a class="text-white text-decoration-none"><a href="" class="text-white text-decoration-none"><i class="fa-solid fa-pen-to-square mx-2"></i>Editar</a></span></td>
+                                        <td><span class="btn btn-danger text-white"><a class="text-white text-decoration-none"><a href="" class="text-white text-decoration-none"><i class="fa-solid fa-trash-can mx-2"></i> Eliminar</a></span></td>
                                     </tr>
                                     
+                                    <?php 
+                                        }
+                                    ?>
                                 </tbody>
                             </table>
 
