@@ -1,0 +1,165 @@
+/* Login */
+.body {
+    background: #360033;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #360033);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #360033);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container-fondo {
+    width: 100%;
+    height: 400px;
+    background-image: url("https://pbs.twimg.com/media/EYfEhiiX0AA9Xma?format=jpg&name=900x900");
+    background-size: 350px;
+    animation: movimiento 10s infinite linear alternate;
+}
+
+@keyframes movimiento {
+    from {
+        background-position: bottom left;
+    }
+
+    to {
+        background-position: top right;
+    }
+}
+
+.fondo {
+    /* Ubicación de la imagen */
+    background-image: url("https://nakedprettygirl.com/download/89-la-mayoria-de-las-mujeres-latinas-desnudas-hermosas-nunca.jpg");
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-size: cover;
+    /* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+    /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+    background-position: center center;
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+    /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+    background-color: #6699;
+}
+
+.btn_register {
+    background: #360033;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0b8793, #360033);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.car_img {
+    background-image: url("https://pbs.twimg.com/media/EYfEhiiX0AA9Xma?format=jpg&name=900x900");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.car_img1 {
+    background-image: url("https://i.imgur.com/1xJYke7.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.car_img2 {
+    background-image: url("https://external-preview.redd.it/1sTMu_bn2uq-lRi80-tZKiC_B-boxGxcxWt_KWC0LhA.jpg?auto=webp&s=0e6f54c63a853a501ae537214cf3b91e37913b94");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+/* Signup */
+.background-radial-gradient {
+    background: #360033;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #360033);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #360033);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: radial-gradient(#44006b, #ad1fff);
+    overflow: hidden;
+}
+
+#radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#44006b, #ad1fff);
+    overflow: hidden;
+}
+
+
+/* Index Usuario  */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.background-cliente{
+    background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

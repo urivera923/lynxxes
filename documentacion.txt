@@ -1,0 +1,4 @@
+Idea que cubra una necesidad
+Reglas de negocios (Boceto)
+Mookups
+POO-> Bootstrap -> Datatable
