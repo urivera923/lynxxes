@@ -58,8 +58,8 @@
                 <div class="form-floating mb-4">
                   <select class="form-select" id="floatingSelectGrid" name="txtRol" required>
                     <option>Seleccionar</option>
-                    <option value="Administrador">Administrador</option>
-                    <option value="Cliente">Cliente</option>
+                    <option value=1>Administrador</option>
+                    <option value=2>Cliente</option>
                   </select>
                   <label for="floatingSelectGrid"><i class="fa-solid fa-users-line me-2"></i>Tipo de usuario</label>
                 </div>

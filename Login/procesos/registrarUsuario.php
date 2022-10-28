@@ -13,7 +13,6 @@
         $pass,
         $rol
     );
-    print_r($datos);
     $obj = new metodosPadre();
     if ($obj->registroUsuario($datos)==1) {
         header("location:../index.php");

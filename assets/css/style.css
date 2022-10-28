@@ -29,7 +29,7 @@
 
 .fondo {
     /* Ubicación de la imagen */
-    background-image: url("https://nakedprettygirl.com/download/89-la-mayoria-de-las-mujeres-latinas-desnudas-hermosas-nunca.jpg");
+    background-image: url("https://c.wallhere.com/photos/79/cc/women_model_brunette_indoors_portrait_looking_at_viewer_lingerie_black_lingerie-1497807.jpg!d");
     /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
     background-size: cover;
     /* Para que la imagen de fondo no se repita */
@@ -157,9 +157,11 @@
 }
 
 
-.background-cliente{
-    background: #c31432;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.background-cliente {
+    background: #c31432;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

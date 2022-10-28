@@ -1,3 +1,10 @@
+<?php session_start();
+  require_once "../app/conexion.php";
+  require_once "../app/metodos.php";
+  if (isset($_SESSION['usuario'])) {
+    $nombre_usuario = $_SESSION['usuario'];  
+  
+?>
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +20,7 @@
 
     <header>
         <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
+            <div class="container-sm">
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">Sobre nosotros</h4>
@@ -40,8 +47,8 @@
                     <strong>Album</strong>
                 </a>
                 <div class="d-flex align-items-center justify-content-between">
-                            <p class="text-white ms-4 mt-3"> Bienvienido Usuario<span class="fw-bolder"></span></p>
-                            <button class="btn btn-outline-danger ms-4"><a href="../login/procesar/salirUsuario.php" class="text-decoration-none text-light">Cerrar Sesión</a></button>
+                            <p class="text-white ms-4 mt-3">¡Hola! <span class="fw-bolder"><?php echo $_SESSION['usuario']?></span></p>
+                            <button class="btn btn-outline-danger ms-4"><a href="../Login/procesos/salirUsuario.php" class="text-decoration-none text-light">Cerrar Sesión</a></button>
                         </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -52,11 +59,11 @@
 
     <main>
 
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
+        <section class="py-4 text-center container">
+            <div class="row py-lg-4">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h3 class="fw-bold text-white">Album</h3>
-                    <p class="fw-bolder text-white">Algo breve y principal sobre la colección a continuación: su contenido, el creador, etc. Hágalo breve y atractivo, pero no demasiado breve para que la gente no se lo salte por completo.</p>
+                    <p class=" text-white">¡Hola! <span class="fw-bolder"><?php echo $_SESSION['usuario']?></span> Puedes escribir algo breve y principal sobre tu colección como se muestra a continuación: su contenido, el creador, etc. Hágalo breve y atractivo, pero no demasiado breve para que la gente no se lo salte por completo.</p>
                     <p>
                         <div class="card shadow border p-4">
                             <div class="mb-3">
@@ -107,15 +114,14 @@
         </div>
     </footer>
 
-
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
 </html>
 
-
+<?php 
+  } else {
+    header("location:../Login/index.php");
+  }
+?>

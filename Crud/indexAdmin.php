@@ -39,7 +39,7 @@
                     </div>
                 </nav>
 
-                <!-- <div class="card my-5 mx-5 shadow border">
+                 <div class="card my-5 mx-5 shadow border">
                     <div class="card-header text-white bg-dark">
                         <div class="text-center fw-bold">Formulario</div>
                     </div>
@@ -56,7 +56,7 @@
                             <button type="submit" class="btn btn-primary">Agregar</button>
                         </form>
                     </div>
-                </div> -->
+                </div> 
 
 
                 <div class="card border shadow mb-5 mx-5">
@@ -91,13 +91,11 @@
                                         <td><span class="btn btn-danger text-white"><a class="text-white text-decoration-none" href="./procesos/eliminarCrud.php?id=<?php echo $key['id_gasto']; ?>"><i class="fa-solid fa-trash-can mx-2"></i>Eliminar</a></span></td>
 
                                     </tr>
-
-
+                                    
                                 </tbody>
                             </table>
 
                         </div>
-
                     </div>
                 </div>
 
@@ -117,6 +115,7 @@
 </html>
 
 <?php 
-
+    } else {
+        header("location:../Login/index.php");
     }
 ?>
