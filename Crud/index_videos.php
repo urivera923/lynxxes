@@ -47,10 +47,10 @@
                         <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                         <circle cx="12" cy="13" r="4" />
                     </svg>
-                    <strong class="me-2">Album</strong>
+                    <strong class="me-2">Videos</strong>
                     
                 </a>
-                <a href="./index_videos.php" class="navbar-brand d-flex align-items-start"><strong>Videos</strong></a>
+                <a href="./index.php" class="navbar-brand d-flex align-items-start"><strong>Album</strong></a>
                 
                 <div class="d-flex align-items-center justify-content-between">
                             <p class="text-white ms-4 mt-3">¡Hola! <span class="fw-bolder"><?php echo $_SESSION['usuario']?></span></p>
@@ -67,7 +67,7 @@
         <section class="py-4 text-center container">
             <div class="row py-lg-4">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h3 class="fw-bold text-white">Album</h3>
+                    <h3 class="fw-bold text-white">Videos</h3>
                     <p class=" text-white">¡Hola! <span class="fw-bolder"><?php echo $_SESSION['usuario']?></span> Puedes escribir algo breve y principal sobre tu colección como se muestra a continuación: su contenido, el creador, etc. Hágalo breve y atractivo, pero no demasiado breve para que la gente no se lo salte por completo.</p>
                     <p>
                         <div class="card shadow border p-4">
@@ -99,7 +99,7 @@
                                 $id = $obj->idUsuario($sql_consulta);
                                 $id_usuario = $id[0]['id_usuario'];
                                 
-                                $sql = "SELECT id_imagen, imagen, descripcion, fecha FROM t_imagenes WHERE rol_id = '2'";
+                                $sql = "SELECT video, descripcion, fecha FROM t_videos WHERE rol_id = '2'";
                                 // print_r($sql);
                                 $datos = $obj->monstarDatos($sql);
 
@@ -107,8 +107,8 @@
                                     
                             
                             ?>
-                            <img src="data:image/jpg;base64, <?php echo base64_encode($key['imagen'])?>" width="50%" height="50%" class="card-img-top" alt="...">
-                        
+                            <!-- <img src="data:image/jpg;base64, <?php echo base64_encode($key['imagen'])?>" width="50%" height="50%" class="card-img-top" alt="..."> -->
+                            <video src="data:video/mp4;base64,  <?php echo base64_encode($key['video'])?>" autoplay controls></video>
                             <div class="card-body">
                                 <h5 class="card-title">Descripción</h5>
                                 <p class="card-text"><?php echo $key['descripcion']?></p>

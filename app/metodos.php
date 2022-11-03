@@ -1,5 +1,5 @@
 <?php
-    class metodosPadre
+    class metodosPadre  
     {
         public function registroUsuario($datos)
         {
@@ -33,7 +33,9 @@
             print_r($sql);
             $respuesta = mysqli_query($conexion, $sql);
             $filas = mysqli_fetch_array($respuesta);
-            print_r($filas);
+            $_SESSION['session'] = true;
+            $_SESSION['idUsuario'] = $filas['id_usuario'];
+            $_SESSION['idRol'] = $filas['rol_id'];
             if ($filas['rol_id'] == 1) {
                 header('location:../../Crud/indexAdmin.php');
             } else if ($filas['rol_id'] == 2) {
@@ -57,6 +59,15 @@
             $conexion=$c->conexion();
             $result = mysqli_query($conexion, $sql);
             return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
+
+        public function eliminarDatos($id)
+        {
+            $c = new conectar();
+            $conexion=$c->conexion();
+
+            $sql = "DELETE FROM t_imagenes WHERE id_imagen='$id'";
+            return  $result = mysqli_query($conexion, $sql);
         }
 
     }
