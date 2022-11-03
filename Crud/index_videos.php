@@ -107,7 +107,6 @@
                                     
                             
                             ?>
-                            <!-- <img src="data:image/jpg;base64, <?php echo base64_encode($key['imagen'])?>" width="50%" height="50%" class="card-img-top" alt="..."> -->
                             <video src="data:video/mp4;base64,  <?php echo base64_encode($key['video'])?>" autoplay controls></video>
                             <div class="card-body">
                                 <h5 class="card-title">Descripción</h5>

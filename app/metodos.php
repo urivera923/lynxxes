@@ -70,5 +70,27 @@
             return  $result = mysqli_query($conexion, $sql);
         }
 
+        
+        public function actualizarDatos($datos)
+        {
+            $c = new conectar();
+            $conexion=$c->conexion();
+            
+            $sql = "UPDATE t_imagenes SET descripcion = '$datos[0]', fecha = '$datos[1]' WHERE id_imagen = '$datos[2]'
+            AND rol_id = '$datos[3]'";
+            return $resultado = mysqli_query($conexion, $sql);
+        }
+
+        public function insertarDatos($datos)
+        {
+            $c = new conectar();
+            $conexion=$c->conexion();
+
+            $sql = "INSERT INTO t_imagenes (imagen, descripcion, fecha, rol_id)
+                    VALUES ('$datos[0]', '$datos[1]', '$datos[2]', '$datos[3]')";
+            
+            return $result = mysqli_query($conexion, $sql);
+        }
+
     }
 ?>
