@@ -5,9 +5,8 @@
     $id = $_GET['id'];
 
     $obj = new metodosPadre();
-    if ($obj->eliminarDatos($id) == 1) {
-        header("location:../../Crud/index.php");
-        // echo "Hola";
+    if ($obj->eliminarVideo($id) == 1) {
+        header("location:../../Crud/index_videos.php");
     } else {
         echo "Fallo al eliminar";
     }

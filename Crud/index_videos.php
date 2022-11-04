@@ -72,14 +72,26 @@
                     <p>
                         <div class="card shadow border p-4">
                             <div class="mb-3">
-                                <form action="frmArchivos">
-                                    <label for="formFile" class="form-label">Seleccina la foto a subir</label>
-                                    <input class="form-control" type="file" id="formFile" name="archivos[]" multiple="multiple">
+                                <form action="../Crud/procesos_video/agregarVideo.php" method="post" enctype="multipart/form-data">
+                                    <label for="formFile" class="form-label">Seleccina el video a subir</label>
+                                    <input class="form-control" type="file" id="formFile" name="txtvideo" multiple="multiple">
+
+                                    <div class="row g-2 mt-2">
+                                        <div class="col-md">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInputGrid" name="txtdescripcion" placeholder="Descripción" required>
+                                                <label for="floatingInputGrid">Descripción</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="form-floating">
+                                                <input type="date" class="form-control" id="floatingInputGrid" name="txtfecha" placeholder="Fecha" required>
+                                                <label for="floatingInputGrid">Fecha</label>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                <button type="submit" class="btn btn-primary mt-3">Agregar</button>
                                 </form>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-secondary">Cancelar</button>
-                                <button type="button" class="btn btn-primary" id="btnGuardarArchivos">Guardar</button>
                             </div>
                         </div>
                     </p>
@@ -99,7 +111,7 @@
                                 $id = $obj->idUsuario($sql_consulta);
                                 $id_usuario = $id[0]['id_usuario'];
                                 
-                                $sql = "SELECT video, descripcion, fecha FROM t_videos WHERE rol_id = '2'";
+                                $sql = "SELECT id_video, video, descripcion, fecha FROM t_videos WHERE rol_id = '2'";
                                 // print_r($sql);
                                 $datos = $obj->monstarDatos($sql);
 
@@ -107,16 +119,17 @@
                                     
                             
                             ?>
-                            <video src="data:video/mp4;base64,  <?php echo base64_encode($key['video'])?>" autoplay controls></video>
+                            <video src="data:video/mp4;base64,  <?php echo base64_encode($key['video'])?>" controls></video>
                             <div class="card-body">
                                 <h5 class="card-title">Descripción</h5>
                                 <p class="card-text"><?php echo $key['descripcion']?></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-warning mx-2">Editar</button>
-                                        <button type="button" class="btn btn-sm btn-outline-danger mx-2">Eliminar</button>
+                                        <button type="button" class="btn btn-sm btn-warning mx-2">Editar</button>
+                                        <button type="button" class="btn btn-sm btn-danger mx-2"><a class="text-white text-decoration-none" href="./procesos_video/eliminarVideo.php?id=<?php echo $key['id_video']?>">Eliminar</a></button>
+
                                     </div>
-                                    <small class="text-muted"><?php echo $key['fecha']?></P></small>
+                                    <small class="text-muted"><?php echo $key['fecha']?></small>
                                 </div>
                              
                             </div>

@@ -92,5 +92,25 @@
             return $result = mysqli_query($conexion, $sql);
         }
 
+        public function insertarDatosVideo($datos)
+        {
+            $c = new conectar();
+            $conexion=$c->conexion();
+
+            $sql = "INSERT INTO t_videos (video, descripcion, fecha, rol_id)
+                    VALUES ('$datos[0]', '$datos[1]', '$datos[2]', '$datos[3]')";
+            
+            return $result = mysqli_query($conexion, $sql);
+        }
+
+        public function eliminarVideo($id)
+        {
+            $c = new conectar();
+            $conexion=$c->conexion();
+
+            $sql = "DELETE FROM t_videos WHERE id_video='$id'";
+            return  $result = mysqli_query($conexion, $sql);
+        }
+
     }
 ?>
