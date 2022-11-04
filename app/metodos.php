@@ -81,9 +81,19 @@
             return $resultado = mysqli_query($conexion, $sql);
         }
 
-        public function insertarDatos($datos)
+        public function actualizarDatosVideo($datos)
         {
             $c = new conectar();
+            $conexion=$c->conexion();
+            
+            $sql = "UPDATE t_videos SET descripcion = '$datos[0]', fecha = '$datos[1]' WHERE id_video = '$datos[2]'
+            AND rol_id = '$datos[3]'";
+            return $resultado = mysqli_query($conexion, $sql);
+        }
+
+        public function insertarDatos($datos)
+        {
+            $c = new Conectar();
             $conexion=$c->conexion();
 
             $sql = "INSERT INTO t_imagenes (imagen, descripcion, fecha, rol_id)

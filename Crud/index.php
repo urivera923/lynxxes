@@ -70,23 +70,24 @@
                     <h3 class="fw-bold text-white">Album</h3>
                     <p class=" text-white">¡Hola! <span class="fw-bolder"><?php echo $_SESSION['usuario']?></span> Puedes escribir algo breve y principal sobre tu colección como se muestra a continuación: su contenido, el creador, etc. Hágalo breve y atractivo, pero no demasiado breve para que la gente no se lo salte por completo.</p>
                    
-                    <div class="card shadow border p-4">
+                    <div class="card shadow border bg-dark p-4">
                         <div class="mb-3">
                             <form action="../Crud/procesos/agregarCrud.php" method="post" enctype="multipart/form-data">
-                                <label for="formFile" class="form-label">Seleccina la foto a subir</label>
+                                <h4 class="fw-bolder text-white">Selecciona la foto a subir</h4>
+                                <label for="formFile" class="form-label" class="fw-bold text-danger"></label>
                                 <input class="form-control" id="formFile" type="file" id="formFile" name="txtimagen" multiple="multiple" required>
                                 
                                 <div class="row g-2 mt-2">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="floatingInputGrid" name="txtdescripcion" placeholder="Descripción" required>
-                                            <label for="floatingInputGrid">Descripción</label>
+                                            <label for="floatingInputGrid"><i class="fa-solid fa-file-lines me-2"></i>Descripción</label>
                                         </div>
                                     </div>
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <input type="date" class="form-control" id="floatingInputGrid" name="txtfecha" placeholder="Fecha" required>
-                                            <label for="floatingInputGrid">Fecha</label>
+                                            <label for="floatingInputGrid"><i class="fa-solid fa-calendar-days me-2"></i>Fecha</label>
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +105,7 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
-                        <div class="card hover-shadow">
+                        <div class="card hover-shadow bg-dark text-white">
                             <?php 
                                 $obj = new metodosPadre();
                                 $sql_consulta = "SELECT * FROM usuarios WHERE nombre = '$nombre_usuario'";
@@ -126,10 +127,10 @@
                                 <p class="card-text"><?php echo $key['descripcion']?></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-warning mx-2">Editar</button>
-                                        <button type="button" class="btn btn-sm btn-danger mx-2"><a class="text-white text-decoration-none" href="../Crud//procesos//eliminarCrud.php?id=<?php echo $key['id_imagen']?>">Eliminar</a></button>
+                                        <button type="button" class="btn btn-warning text-white"><a class="text-white text-decoration-none" href="editar_imagenes.php?id=<?php echo $key['id_imagen']; ?>"><i class="fa-solid fa-pen-to-square mx-2"></i>Editar</a></button>
+                                        <button type="button" class="btn btn-danger text-white mx-2"><a class="text-white text-decoration-none" href="../Crud//procesos//eliminarCrud.php?id=<?php echo $key['id_imagen']?>"><i class="fa-solid fa-delete-left mx-2"></i>Eliminar</a></button>
                                     </div>
-                                    <small class="text-muted"><?php echo $key['fecha']?></P></small>
+                                    <small ><?php echo $key['fecha']?></P></small>
                                 </div>
                              
                             </div>

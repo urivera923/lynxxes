@@ -10,8 +10,6 @@
     
 
     $id_usuario= $id[0]['id_usuario'];
-    print_r($id_usuario);
-    // $imagen = $_POST['txtimagen'];
     $imagen = addslashes(file_get_contents($_FILES['txtimagen']['tmp_name']));
     $descripcion = $_POST['txtdescripcion'];
     $fecha = $_POST['txtfecha'];

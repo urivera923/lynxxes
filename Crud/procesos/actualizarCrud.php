@@ -5,26 +5,21 @@
 
     $nombre_usuario = $_SESSION['usuario'];
     $obj = new metodosPadre();
-    $sql = "SELECT id_usuario FROM usuarios WHERE usuario='$nombre_usuario'";
+    $sql = "SELECT id_usuario FROM usuarios WHERE nombre='$nombre_usuario'";
     $id=$obj->idUsuario($sql);
     
     
 
-    $id_usuario= $id[0]['id'];
-    print_r($id_usuario);
-    $cantidad = $_POST['txtcantidad'];
-    print_r($cantidad);
-    $concepto = $_POST['txtconcepto'];
-    print_r($concepto);
-    $fecha = $_POST['txtfecha'];
-    print_r($fecha);
+    $id_usuario= $id[0]['id_usuario'];
+    $desc = $_POST['txtDescripcion'];
+    $fech = $_POST['txtFecha'];
+
     $id = $_POST['id'];
     print_r($id);
 
     $datos = array(
-        $cantidad, 
-        $concepto,
-        $fecha,
+        $desc,
+        $fech,
         $id,
         $id_usuario
     );

@@ -10,7 +10,7 @@
     
 
     $id_usuario= $id[0]['id_usuario'];
-    print_r($id_usuario);
+    // print_r($id_usuario);
     $video = addslashes(file_get_contents($_FILES['txtvideo']['tmp_name']));
     $descripcion = $_POST['txtdescripcion'];
     $fecha = $_POST['txtfecha'];
